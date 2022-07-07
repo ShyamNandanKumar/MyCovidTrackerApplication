@@ -46,7 +46,7 @@ public class CovidService {
         //System.out.println(response.body());
 
         StringReader csvReader =new StringReader(response.body());
-        Iterable<CSVRecod> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvReader);
+        Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvReader);
         for (CSVRecord record : records) {
             LocationStats locationstat = new LocationStats();
 
